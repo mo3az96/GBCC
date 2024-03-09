@@ -1435,6 +1435,9 @@ html[dir=ltr] .header-btn {
   z-index: 3;
   position: relative;
 }
+html[dir=ltr] .page-title {
+  letter-spacing: 0.84px;
+}
 @media (max-width: 1199px) {
   .page-title {
     margin: 70px 0 0;
@@ -1916,5 +1919,117 @@ footer .pattern img {
   .services-grid {
     gap: 20px;
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.partners-section {
+  background-color: #fff;
+  padding: 64px 0 95px;
+}
+@media (max-width: 767px) {
+  .partners-section {
+    padding: 40px 0 50px;
+  }
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .partners-grid {
+    gap: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+}
+
+.partner-item {
+  width: 100%;
+}
+.partner-item .partner-img {
+  width: 100%;
+  aspect-ratio: 270/201;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.0392156863);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.partner-item .partner-img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.partner-item .partner-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #191a15;
+  text-align: center;
+  line-height: 1.667;
+  margin: 22px 0 0;
+}
+.partner-item .partner-name a {
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.partner-item .partner-name a:hover {
+  color: #F30D07;
+}
+@media (max-width: 991px) {
+  .partner-item .partner-name {
+    font-size: 14px;
+    margin: 15px 0 0;
+  }
+}
+.partner-item .partner-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #2E73B4;
+  stroke: #2E73B4;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 6px auto 0;
+  transition: all 0.3s ease-in-out;
+}
+.partner-item .partner-btn:hover {
+  color: #F30D07;
+  stroke: #F30D07;
+}
+html[dir=rtl] .partner-item .partner-btn svg {
+  transform: scaleX(-1);
+}
+html[dir=ltr] .partner-item .partner-btn {
+  letter-spacing: 0.84px;
+}
+@media (max-width: 767px) {
+  .partner-item .partner-btn {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */
