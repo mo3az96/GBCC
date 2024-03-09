@@ -1889,4 +1889,32 @@ footer .pattern img {
     min-width: 100%;
     padding: 25px 5px;
   }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 29px;
+}
+@media (max-width: 1199px) {
+  .services-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .services-grid {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .services-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .services-grid {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */
