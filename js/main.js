@@ -22,6 +22,7 @@ $(document).ready(function () {
       }
     });
   }
+
   /************************************ Services Slider ************************************/
   var servicesSwiper = new Swiper(".services-slider .swiper", {
     a11y: {
@@ -64,4 +65,16 @@ $(document).ready(function () {
       },
     },
   });
+
+  /************************************ County Key ************************************/
+  var input = $("input[type=tel]");
+  for (let i = 0; i < input.length; i++) {
+    intlTelInput(input[i], {
+      utilsScript: "js/utils.js",
+      autoPlaceholder: "aggressive",
+      separateDialCode: true,
+      initialCountry: "sa",
+      preferredCountries: ["sa", "kw", "ae", "bh", "om", "qa"],
+    });
+  }
 });
