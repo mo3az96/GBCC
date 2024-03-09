@@ -77,4 +77,33 @@ $(document).ready(function () {
       preferredCountries: ["sa", "kw", "ae", "bh", "om", "qa"],
     });
   }
+
+  /************************************ Statistics ************************************/
+  if ($(".statistics-section").length) {
+    var a = 0;
+    $(window).scroll(function () {
+      if (
+        a == 0 &&
+        $(this).scrollTop() >= $(".statistics-section").offset().top - 300
+      ) {
+        $(".statistic-item .number span").each(function () {
+          $(this)
+            .prop("Counter", 0)
+            .animate(
+              {
+                Counter: $(this).text(),
+              },
+              {
+                duration: 500,
+                easing: "swing",
+                step: function (now) {
+                  $(this).text(Math.ceil(now));
+                },
+              }
+            );
+        });
+        a++;
+      }
+    });
+  }
 });
