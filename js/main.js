@@ -106,4 +106,47 @@ $(document).ready(function () {
       }
     });
   }
+
+   /************************************ Press Slider ************************************/
+   var pressSwiper = new Swiper(".press-slider .swiper", {
+    a11y: {
+      enabled: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        loop: false,
+      },
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: false,
+      },
+    },
+    pagination: {
+      el: ".press-slider .slider-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
 });
